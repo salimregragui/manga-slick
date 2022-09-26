@@ -1,0 +1,29 @@
+@import "../../../utils/theme.scss";
+
+.Searchbar {
+    width: 60%;
+    height: 50px;
+    background-color: $containerColor;
+    color: $textColor;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    span {
+        margin-left: 10px;
+        font-size: 16px;
+    }
+
+    &:hover {
+        opacity: 0.8;
+
+        transition: 0.2s;
+    }
+}

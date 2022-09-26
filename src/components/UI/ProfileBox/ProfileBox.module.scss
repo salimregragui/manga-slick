@@ -1,0 +1,43 @@
+@import "../../../utils/theme.scss";
+
+.ProfileBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .ProfileBoxImage {
+    width: 140px;
+    height: 140px;
+    background-color: $secondaryColor;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 5px solid $secondaryColor;
+
+    transition: 0.2s;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: $textColor;
+
+    transition: 0.2s;
+  }
+
+  transition: 0.2s;
+
+  &:hover {
+    cursor: pointer;
+
+    .ProfileBoxImage {
+      border: 5px solid $primaryColor;
+    }
+
+    h3 {
+      color: $primaryColor;
+      cursor: pointer;
+    }
+
+    transition: 0.2s;
+  }
+}
