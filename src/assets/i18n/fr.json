@@ -6,11 +6,15 @@
   "leftbar.settings": "Réglages",
   "leftbar.updates": "Mises à jour",
   "leftbar.changelog": "Changelog",
+  "leftbar.plugins": "Plugins",
   "leftbar.about": "À propos",
   "leftbar.donation": "Faire un don",
   "leftbar.resumeReading": "Reprendre la lecture",
   "searchbar.placeholder": "Chercher...",
   "titles.continueReading": "Continuer la lecture",
   "titles.re-read": "Relire",
-  "titles.newChapters": "Nouveaux chapitres disponibles"
+  "titles.newChapters": "Nouveaux chapitres disponibles",
+  "leftbar.switch-account": "Changer de compte",
+  "screen-titles.home": "Accueil",
+  "screen-titles.library": "Librairie"
 }

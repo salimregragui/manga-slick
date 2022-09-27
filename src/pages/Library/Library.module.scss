@@ -1,37 +1,48 @@
-@import "../../../utils/theme.scss";
+@import "../../utils/theme.scss";
 
-.BooksCategory {
+.Library {
   width: 100%;
-  height: auto;
+  max-width: 100%;
+  height: calc(100% - $headerHeight);
+  max-height: calc(100% - $headerHeight);
   display: flex;
   flex-direction: column;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  background-color: $backgroundColor;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
-  h1 {
-    font-size: $titleSize;
-    font-weight: 600;
-    color: $secondaryColor;
-    font-size: 16px;
-  }
-
-  .BooksScroller {
-    max-width: 100%;
-    height: auto;
+  .LibraryManagementHeader {
+    width: 100%;
+    min-height: 60px;
+    background-color: $containerColor;
+    border-radius: 5px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 30px;
-    margin-top: 10px;
-    overflow-x: auto;
-    overflow-y: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-    .BooksScrollerBook {
+  .LibraryBooks {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 20px;
+
+    .LibraryBooksItem {
       display: flex;
       flex-direction: column;
       border-radius: 5px;
-      padding-top: 20px;
-      padding-bottom: 10px;
+      flex: 0 1 15%;
+      padding: 20px;
+      padding-bottom: 0px;
 
       .BookImage {
         width: 140px;
@@ -63,8 +74,6 @@
 
       &:hover {
         background-color: $containerColor;
-        padding: 20px;
-        padding-bottom: 10px;
         transition: 0.2s;
       }
     }

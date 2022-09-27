@@ -1,12 +1,12 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
-import BooksCategory from "../../components/UI/BooksCategory/BooksCategory";
-import classes from "./Home.module.scss";
+import ProgressBar from "../../components/UI/ProgressBar/ProgressBar";
+import classes from "./Library.module.scss";
 
-function Home() {
-    const {t} = useTranslation();
-  const continueReadingBooks = [
+function Library() {
+  const library = [
     {
       id: "A15784e",
       title: "One Piece",
@@ -117,16 +117,103 @@ function Home() {
       image:
         "https://upload.wikimedia.org/wikipedia/en/9/94/NarutoCoverTankobon1.jpg",
     },
+    {
+      id: "fr8748",
+      title: "Naruto",
+      author: "Masachi Kichimoto",
+      link: "/",
+      currentChapter: 350,
+      totalChapters: 980,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/9/94/NarutoCoverTankobon1.jpg",
+    },
+    {
+      id: "fr8748",
+      title: "Naruto",
+      author: "Masachi Kichimoto",
+      link: "/",
+      currentChapter: 350,
+      totalChapters: 980,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/9/94/NarutoCoverTankobon1.jpg",
+    },
+    {
+      id: "fr8748",
+      title: "Naruto",
+      author: "Masachi Kichimoto",
+      link: "/",
+      currentChapter: 350,
+      totalChapters: 980,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/9/94/NarutoCoverTankobon1.jpg",
+    },
+    {
+      id: "fr8748",
+      title: "Naruto",
+      author: "Masachi Kichimoto",
+      link: "/",
+      currentChapter: 350,
+      totalChapters: 980,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/9/94/NarutoCoverTankobon1.jpg",
+    },
+    {
+      id: "fr8748",
+      title: "Naruto",
+      author: "Masachi Kichimoto",
+      link: "/",
+      currentChapter: 350,
+      totalChapters: 980,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/9/94/NarutoCoverTankobon1.jpg",
+    },
+    {
+      id: "fr8748",
+      title: "Naruto",
+      author: "Masachi Kichimoto",
+      link: "/",
+      currentChapter: 350,
+      totalChapters: 980,
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/9/94/NarutoCoverTankobon1.jpg",
+    },
   ];
+
+  const { t } = useTranslation();
+
   return (
-    <Layout title={t("screen-titles.home")}>
-      <div className={classes.Home}>
-        <BooksCategory title={t("titles.newChapters")} books={continueReadingBooks} />
-        <BooksCategory title={t("titles.continueReading")} books={continueReadingBooks} withProgressbar />
-        <BooksCategory title={t("titles.re-read")} books={continueReadingBooks} />
+    <Layout title={t("screen-titles.library")}>
+      <div className={classes.Library}>
+        <div className={classes.LibraryManagementHeader}>hey</div>
+
+        <div className={classes.LibraryBooks}>
+          {library.map((book) => (
+            <Link
+              to={book.link}
+              className={classes.LibraryBooksItem}
+              id={book.id}
+            >
+              <div
+                className={classes.BookImage}
+                style={{ backgroundImage: `url("${book.image}")` }}
+              ></div>
+              <div className={classes.BookInfo}>
+                <h2>{book.title}</h2>
+                <span>{book.author}</span>
+              </div>
+              {book.currentChapter && (
+                <ProgressBar
+                  percent={Math.floor(
+                    (book.currentChapter / book.totalChapters) * 100
+                  )}
+                />
+              )}
+            </Link>
+          ))}
+        </div>
       </div>
     </Layout>
   );
 }
 
-export default Home;
+export default Library;

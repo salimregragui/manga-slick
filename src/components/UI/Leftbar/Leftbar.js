@@ -8,7 +8,11 @@ import {
   MdSystemUpdateAlt,
 } from "react-icons/md";
 import { FiSettings } from "react-icons/fi";
-import { AiOutlineLike, AiOutlineInfoCircle } from "react-icons/ai";
+import {
+  AiOutlineLike,
+  AiOutlineInfoCircle,
+  AiOutlineAppstoreAdd,
+} from "react-icons/ai";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
@@ -18,16 +22,19 @@ function Leftbar() {
     <div className={classes.Leftbar}>
       <div className={classes.ProfileInfos}>
         <div className={classes.ProfileInfosImage}></div>
-        <h1>
-          Salim
-          <br />
-          Regragui
-        </h1>
+        <div className={classes.ProfileInfosRight}>
+          <h1>
+            Salim
+            <br />
+            Regragui
+          </h1>
+          <Link to="/">{t("leftbar.switch-account")}</Link>
+        </div>
       </div>
 
       <div className={classes.LeftbarCategory}>
         <LeftbarLink
-          to="/all-library"
+          to="/library"
           Icon={BiLibrary}
           text={t("leftbar.all_library")}
           quantity={25}
@@ -38,11 +45,11 @@ function Leftbar() {
           text={t("leftbar.wishlist")}
           quantity={127}
         />
-        <LeftbarLink
+        {/* <LeftbarLink
           to="/recommendations"
           Icon={MdOutlineRecommend}
           text={t("leftbar.recommendations")}
-        />
+        /> */}
       </div>
 
       <div className={classes.LeftbarCategory}>
@@ -50,6 +57,12 @@ function Leftbar() {
           to="/settings"
           Icon={FiSettings}
           text={t("leftbar.settings")}
+        />
+        <LeftbarLink
+          to="/plugins"
+          Icon={AiOutlineAppstoreAdd}
+          text={t("leftbar.plugins")}
+          quantity={5}
         />
         <LeftbarLink
           to="/updates"

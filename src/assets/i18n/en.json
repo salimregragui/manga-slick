@@ -6,6 +6,7 @@
   "leftbar.settings": "Settings",
   "leftbar.updates": "Check For Updates",
   "leftbar.changelog": "Changelog",
+  "leftbar.plugins": "Plugins",
   "leftbar.about": "About The App",
   "leftbar.donation": "Donate",
   "leftbar.logout": "Logout",
@@ -13,5 +14,8 @@
   "searchbar.placeholder": "Search...",
   "titles.continueReading": "Continue Reading",
   "titles.re-read": "Re-Read",
-  "titles.newChapters": "New Chapters Available"
+  "titles.newChapters": "New Chapters Available",
+  "leftbar.switch-account": "Switch Account",
+  "screen-titles.home": "Home",
+  "screen-titles.library": "Library"
 }

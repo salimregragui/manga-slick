@@ -2,23 +2,21 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
-import Home from "./pages/Home/Home";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ProfileSelection from "./pages/ProfileSelection/ProfileSelection";
+import { HashRouter } from "react-router-dom";
 import "./i18n";
+import App from "./App";
+import { Provider } from "react-redux";
+import { store } from "./store/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <ProfileSelection />,
-  },
-  {
-    path: "/home",
-    element: <Home />,
-  },
-]);
-root.render(<RouterProvider router={router} />);
+
+root.render(
+  <HashRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </HashRouter>
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

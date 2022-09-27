@@ -7,6 +7,7 @@ function createWindow() {
     height: 600,
     webPreferences: {
       nodeIntegration: true,
+      contextIsolation: false,
     },
     autoHideMenuBar: true,
   });
@@ -16,6 +17,8 @@ function createWindow() {
   } else {
     mainWindow.loadURL("http://localhost:3000");
   }
+
+  mainWindow.maximize();
 }
 
 app.whenReady().then(createWindow);
