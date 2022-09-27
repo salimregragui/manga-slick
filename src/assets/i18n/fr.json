@@ -5,5 +5,12 @@
   "leftbar.recommendations": "Recommendations",
   "leftbar.settings": "Réglages",
   "leftbar.updates": "Mises à jour",
-  "leftbar.changelog": "Changelog"
+  "leftbar.changelog": "Changelog",
+  "leftbar.about": "À propos",
+  "leftbar.donation": "Faire un don",
+  "leftbar.resumeReading": "Reprendre la lecture",
+  "searchbar.placeholder": "Chercher...",
+  "titles.continueReading": "Continuer la lecture",
+  "titles.re-read": "Relire",
+  "titles.newChapters": "Nouveaux chapitres disponibles"
 }

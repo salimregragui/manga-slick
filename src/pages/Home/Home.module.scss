@@ -2,7 +2,16 @@
 
 .Home {
     width: 100%;
+    max-width: 100%;
+    height: calc(100% - $headerHeight);
+    max-height: calc(100% - $headerHeight);
     display: flex;
     flex-direction: column;
     background-color: $backgroundColor;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
