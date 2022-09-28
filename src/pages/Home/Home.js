@@ -5,7 +5,16 @@ import BooksCategory from "../../components/UI/BooksCategory/BooksCategory";
 import classes from "./Home.module.scss";
 
 function Home() {
-    const {t} = useTranslation();
+  const { t } = useTranslation();
+
+  const getAllProfiles = async () => {
+    const data = await window.api.profileManager.getAllProfiles();
+
+    console.log(data);
+  };
+
+  getAllProfiles();
+
   const continueReadingBooks = [
     {
       id: "A15784e",
@@ -121,9 +130,19 @@ function Home() {
   return (
     <Layout title={t("screen-titles.home")}>
       <div className={classes.Home}>
-        <BooksCategory title={t("titles.newChapters")} books={continueReadingBooks} />
-        <BooksCategory title={t("titles.continueReading")} books={continueReadingBooks} withProgressbar />
-        <BooksCategory title={t("titles.re-read")} books={continueReadingBooks} />
+        <BooksCategory
+          title={t("titles.newChapters")}
+          books={continueReadingBooks}
+        />
+        <BooksCategory
+          title={t("titles.continueReading")}
+          books={continueReadingBooks}
+          withProgressbar
+        />
+        <BooksCategory
+          title={t("titles.re-read")}
+          books={continueReadingBooks}
+        />
       </div>
     </Layout>
   );

@@ -2,7 +2,6 @@ import React from "react";
 import classes from "./ProgressBar.module.scss";
 
 function ProgressBar({ percent }) {
-    console.log(percent);
   return (
     <div className={classes.ProgressBar}>
       <div
