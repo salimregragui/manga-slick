@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import Layout from "../../components/Layout/Layout";
 import classes from "./Changelog.module.scss";
 import { format } from "date-fns";
-import { GiPlainCircle} from "react-icons/gi"
+import { GiPlainCircle } from "react-icons/gi";
 
 function Changelog() {
   const { t } = useTranslation();
@@ -85,6 +85,9 @@ function Changelog() {
             </div>
             <div className={classes.ChangelogVersionHeader}>
               <h1>{format(new Date(version.date), "dd-MM-yyyy")}</h1>
+              <span className={classes.ChangelogVersionHeaderVers}>
+                VERSION: {version.version}
+              </span>
               {i === 0 && <span>LATEST</span>}
             </div>
 

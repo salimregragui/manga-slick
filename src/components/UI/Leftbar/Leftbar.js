@@ -55,7 +55,7 @@ function Leftbar() {
             to="/wishlist"
             Icon={AiOutlineLike}
             text={t("leftbar.wishlist")}
-            quantity={127}
+            quantity={12700}
             isCurrentRoute={checkIsCurrentRoute(location.pathname, "/wishlist")}
           />
           {/* <LeftbarLink
