@@ -10,6 +10,8 @@ function createWindow() {
       contextIsolation: false,
     },
     autoHideMenuBar: true,
+    backgroundColor: "#181818",
+    show: false,
   });
 
   if (app.isPackaged) {
@@ -18,6 +20,9 @@ function createWindow() {
     mainWindow.loadURL("http://localhost:3000");
   }
 
+  mainWindow.once("ready-to-show", () => {
+    mainWindow.show();
+  });
   mainWindow.maximize();
 }
 

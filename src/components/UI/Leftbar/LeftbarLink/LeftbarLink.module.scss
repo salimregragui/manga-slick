@@ -1,5 +1,9 @@
 @import "../../../../utils/theme.scss";
 
+.CurrentRoute {
+  background-color: $backgroundColor;
+}
+
 .LeftbarLink {
   width: 100%;
   height: 40px;
@@ -9,6 +13,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 
   .LinkData {
     display: flex;
@@ -18,10 +23,10 @@
     color: $secondaryColor;
 
     span {
-        font-size: 13px;
-        margin-left: 10px;
-        font-weight: 500;
-        padding-top: 2px;
+      font-size: 13px;
+      margin-left: 10px;
+      font-weight: 500;
+      padding-top: 2px;
     }
   }
 
@@ -44,7 +49,7 @@
   &:hover {
     background-color: $backgroundColor;
     .LinkData {
-        color: $textColor;
+      color: $textColor;
     }
 
     transition: 0.2s;

@@ -4,6 +4,7 @@
   "leftbar.wishlist": "Your Wishlist",
   "leftbar.recommendations": "Recommendations",
   "leftbar.settings": "Settings",
+  "leftbar.home": "Home",
   "leftbar.updates": "Check For Updates",
   "leftbar.changelog": "Changelog",
   "leftbar.plugins": "Plugins",
@@ -17,5 +18,12 @@
   "titles.newChapters": "New Chapters Available",
   "leftbar.switch-account": "Switch Account",
   "screen-titles.home": "Home",
-  "screen-titles.library": "Library"
+  "screen-titles.library": "Library",
+  "screen-titles.about": "About",
+  "screen-titles.changelog": "Changelog",
+  "screen-titles.donation": "Donation",
+  "screen-titles.plugins": "Plugins",
+  "screen-titles.settings": "Settings",
+  "screen-titles.updates": "Updates",
+  "screen-titles.wishlist": "Wishlist"
 }

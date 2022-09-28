@@ -1,6 +1,7 @@
 {
   "profileSelection.welcomeText": "Re-Bienvenue ! Quel profile voulez vous utiliser ?",
   "leftbar.all_library": "Votre Librairie",
+  "leftbar.home": "Accueil",
   "leftbar.wishlist": "Liste de souhaits",
   "leftbar.recommendations": "Recommendations",
   "leftbar.settings": "Réglages",
@@ -16,5 +17,12 @@
   "titles.newChapters": "Nouveaux chapitres disponibles",
   "leftbar.switch-account": "Changer de compte",
   "screen-titles.home": "Accueil",
-  "screen-titles.library": "Librairie"
+  "screen-titles.library": "Librairie",
+  "screen-titles.about": "À propos",
+  "screen-titles.changelog": "Changelog",
+  "screen-titles.donation": "Donation",
+  "screen-titles.plugins": "Plugins",
+  "screen-titles.settings": "Réglages",
+  "screen-titles.updates": "Mises à jour",
+  "screen-titles.wishlist": "Liste de souhaits"
 }

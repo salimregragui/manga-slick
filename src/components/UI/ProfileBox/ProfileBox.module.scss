@@ -6,19 +6,21 @@
   align-items: center;
 
   .ProfileBoxImage {
-    width: 140px;
-    height: 140px;
-    background-color: $secondaryColor;
+    width: 120px;
+    height: 120px;
+    background-color: $containerColor;
     border-radius: 10px;
     margin-bottom: 10px;
-    border: 5px solid $secondaryColor;
+    border: 5px solid $containerColor;
+    background-position: center;
+    background-size: cover;
 
     transition: 0.2s;
   }
 
   h3 {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 400;
     color: $textColor;
 
     transition: 0.2s;

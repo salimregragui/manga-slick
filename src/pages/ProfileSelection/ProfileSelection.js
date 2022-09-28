@@ -12,10 +12,22 @@ function ProfileSelection() {
       </h1>
 
       <div className={classes.AvailableProfiles}>
-        <ProfileBox name="Salim" />
-        <ProfileBox name="Mike" />
-        <ProfileBox name="Britta" />
-        <ProfileBox name="Private" />
+        <ProfileBox
+          name="Salim"
+          avatar="https://ui-avatars.com/api/?name=Salim+regragui"
+        />
+        <ProfileBox
+          name="Mike"
+          avatar="https://ui-avatars.com/api/?name=Mike+Lebski"
+        />
+        <ProfileBox
+          name="Britta"
+          avatar="https://ui-avatars.com/api/?name=Britta+Marlo"
+        />
+        <ProfileBox
+          name="Private"
+          avatar="https://ui-avatars.com/api/?name=Private"
+        />
       </div>
     </div>
   );

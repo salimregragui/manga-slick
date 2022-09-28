@@ -28,10 +28,32 @@ body {
   outline: none;
 }
 
+:not(input):not(textarea),
+:not(input):not(textarea)::after,
+:not(input):not(textarea)::before {
+  -webkit-user-select: none;
+  user-select: none;
+}
+input,
+button,
+textarea,
+:focus {
+  outline: none;
+}
+
+*,
+*::after,
+*::before {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-app-region: no-drag;
+}
+
 /* Let's get this party started */
 *::-webkit-scrollbar {
-  height: 4px;
-  width: 7px;
+  height: 5px;
+  width: 6px;
 }
 
 /* Track */

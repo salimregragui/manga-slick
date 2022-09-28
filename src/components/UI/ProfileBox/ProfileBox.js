@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./ProfileBox.module.scss";
 import { useNavigate } from "react-router-dom";
 
-function ProfileBox({ name }) {
+function ProfileBox({ name, avatar }) {
   const navigate = useNavigate();
 
   const handleProfileSelection = () => {
@@ -11,7 +11,10 @@ function ProfileBox({ name }) {
 
   return (
     <div className={classes.ProfileBox} onClick={handleProfileSelection}>
-      <div className={classes.ProfileBoxImage}></div>
+      <div
+        className={classes.ProfileBoxImage}
+        style={{ backgroundImage: `url("${avatar}")` }}
+      ></div>
       <h3>{name}</h3>
     </div>
   );

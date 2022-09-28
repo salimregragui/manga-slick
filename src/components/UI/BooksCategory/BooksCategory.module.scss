@@ -23,8 +23,15 @@
     align-items: center;
     gap: 30px;
     margin-top: 10px;
-    overflow-x: auto;
+    overflow-x: hidden;
     overflow-y: hidden;
+
+    transition: 0.2s;
+
+    &:hover {
+        overflow-x: auto;
+        transition: 0.2s;
+    }
 
     .BooksScrollerBook {
       display: flex;
@@ -32,6 +39,7 @@
       border-radius: 5px;
       padding-top: 20px;
       padding-bottom: 10px;
+      margin-bottom: 10px;
 
       .BookImage {
         width: 140px;

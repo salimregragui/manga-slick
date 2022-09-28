@@ -23,6 +23,7 @@
     "autoprefixer": "^9",
     "concurrently": "^7.4.0",
     "cross-env": "^7.0.3",
+    "date-fns": "^2.29.3",
     "i18next": "^21.9.2",
     "i18next-browser-languagedetector": "^6.1.5",
     "lottie-web": "^5.9.6",

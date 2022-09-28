@@ -23,12 +23,43 @@
     border-radius: 5px;
     cursor: default;
 
-    input {
-        width: 100%;
+    .SearchModalInput {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: $textColor;
+      font-size: 24px;
+      input {
+        flex: 1;
         height: 50px;
         border-radius: 5px;
         background-color: $containerColor;
         color: $textColor;
+        font-size: 16px;
+        padding-left: 10px;
+      }
+
+      .SearchModalInputClear {
+        background-color: $secondaryColor;
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        cursor: pointer;
+        color: $containerColor;
+
+        transition: 0.2s;
+
+        &:hover {
+          background-color: $backgroundColor;
+          color: $secondaryColor;
+
+          transition: 0.2s;
+        }
+      }
     }
   }
 }

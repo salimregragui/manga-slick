@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Leftbar.module.scss";
 import LeftbarLink from "./LeftbarLink/LeftbarLink";
-import { BiLibrary, BiDonateHeart } from "react-icons/bi";
+import { BiLibrary, BiDonateHeart, BiHome } from "react-icons/bi";
 import {
   MdOutlineRecommend,
   MdOutlineChangeCircle,
@@ -14,10 +14,13 @@ import {
   AiOutlineAppstoreAdd,
 } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import checkIsCurrentRoute from "../../../utils/functions/check-is-current-route";
 
 function Leftbar() {
   const { t } = useTranslation();
+  const location = useLocation();
+
   return (
     <div className={classes.Leftbar}>
       <div className={classes.ProfileInfos}>
@@ -32,61 +35,78 @@ function Leftbar() {
         </div>
       </div>
 
-      <div className={classes.LeftbarCategory}>
-        <LeftbarLink
-          to="/library"
-          Icon={BiLibrary}
-          text={t("leftbar.all_library")}
-          quantity={25}
-        />
-        <LeftbarLink
-          to="/wishlist"
-          Icon={AiOutlineLike}
-          text={t("leftbar.wishlist")}
-          quantity={127}
-        />
-        {/* <LeftbarLink
+      <div className={classes.LeftBarCategories}>
+        <div className={classes.LeftbarCategory}>
+          <LeftbarLink
+            to="/home"
+            Icon={BiHome}
+            text={t("leftbar.home")}
+            quantity={25}
+            isCurrentRoute={checkIsCurrentRoute(location.pathname, "/home")}
+          />
+          <LeftbarLink
+            to="/library"
+            Icon={BiLibrary}
+            text={t("leftbar.all_library")}
+            quantity={25}
+            isCurrentRoute={checkIsCurrentRoute(location.pathname, "/library")}
+          />
+          <LeftbarLink
+            to="/wishlist"
+            Icon={AiOutlineLike}
+            text={t("leftbar.wishlist")}
+            quantity={127}
+            isCurrentRoute={checkIsCurrentRoute(location.pathname, "/wishlist")}
+          />
+          {/* <LeftbarLink
           to="/recommendations"
           Icon={MdOutlineRecommend}
           text={t("leftbar.recommendations")}
         /> */}
-      </div>
+        </div>
 
-      <div className={classes.LeftbarCategory}>
-        <LeftbarLink
-          to="/settings"
-          Icon={FiSettings}
-          text={t("leftbar.settings")}
-        />
-        <LeftbarLink
-          to="/plugins"
-          Icon={AiOutlineAppstoreAdd}
-          text={t("leftbar.plugins")}
-          quantity={5}
-        />
-        <LeftbarLink
-          to="/updates"
-          Icon={MdSystemUpdateAlt}
-          text={t("leftbar.updates")}
-        />
-        <LeftbarLink
-          to="/changelog"
-          Icon={MdOutlineChangeCircle}
-          text={t("leftbar.changelog")}
-        />
-      </div>
+        <div className={classes.LeftbarCategory}>
+          <LeftbarLink
+            to="/settings"
+            Icon={FiSettings}
+            text={t("leftbar.settings")}
+            isCurrentRoute={checkIsCurrentRoute(location.pathname, "/settings")}
+          />
+          <LeftbarLink
+            to="/plugins"
+            Icon={AiOutlineAppstoreAdd}
+            text={t("leftbar.plugins")}
+            quantity={5}
+            isCurrentRoute={checkIsCurrentRoute(location.pathname, "/plugins")}
+          />
+          <LeftbarLink
+            to="/updates"
+            Icon={MdSystemUpdateAlt}
+            text={t("leftbar.updates")}
+            isCurrentRoute={checkIsCurrentRoute(location.pathname, "/updates")}
+          />
+          <LeftbarLink
+            to="/changelog"
+            Icon={MdOutlineChangeCircle}
+            text={t("leftbar.changelog")}
+            isCurrentRoute={checkIsCurrentRoute(location.pathname, "/changelog")}
+          />
+        </div>
 
-      <div className={classes.LeftbarCategory}>
-        <LeftbarLink
-          to="/about"
-          Icon={AiOutlineInfoCircle}
-          text={t("leftbar.about")}
-        />
-        <LeftbarLink
-          to="/donation"
-          Icon={BiDonateHeart}
-          text={t("leftbar.donation")}
-        />
+        <div className={classes.LeftbarCategory}>
+          <LeftbarLink
+            to="/donation"
+            Icon={BiDonateHeart}
+            text={t("leftbar.donation")}
+            isCurrentRoute={checkIsCurrentRoute(location.pathname, "/donation")}
+          />
+          <LeftbarLink
+            to="/about"
+            Icon={AiOutlineInfoCircle}
+            text={t("leftbar.about")}
+            isCurrentRoute={checkIsCurrentRoute(location.pathname, "/about")}
+          />
+        </div>
       </div>
 
       <div className={classes.LeftBarResume}>
